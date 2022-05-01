@@ -1,0 +1,6 @@
+syntax = "proto3";
+option go_package = "jdnotes-casbin-enforcer/src/services"; //输出路径
+import "enforce_models.proto";  //引入model文件
+service EnforceService { //服务器的名字
+  rpc Enforce(EnforceRequest) returns (EnforceResponse);
+}

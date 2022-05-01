@@ -1,0 +1,13 @@
+syntax = "proto3";
+option go_package = "jdnotes-casbin-enforcer/src/services";
+
+//已知用户名和id，请求jwt
+message EnforceRequest {
+  string user_name = 1;
+  string route = 2;
+  string act = 3;
+}
+
+message EnforceResponse {
+  bool pass=1;
+}
